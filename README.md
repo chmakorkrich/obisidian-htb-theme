@@ -16,4 +16,4 @@ A sleek Obsidian theme inspired by **Hack The Box Pwnbox**, designed for hackers
 
 <img width="2216" height="981" alt="UbCgwWhmHN" src="https://github.com/user-attachments/assets/e0c298ee-a288-4518-803b-b4ed7dbf3b9d" />
 
-### I created this theme because i love hackthebox alot especially it is inspired by HTB Pwnbox Color Scheme.
+Thanks!
