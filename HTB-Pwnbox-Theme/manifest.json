@@ -1,6 +1,7 @@
 {
-  "name": "HTB-Pwnbox-Theme",
+  "name": "Chmakorkrich",
   "version": "1.0.0",
+  "minAppVersion": "0.16.0",
   "description": "Hackthebox Pwnbox alike",
-  "author": "chmakorkrich"
+  "author": "YUN Mony"
 }

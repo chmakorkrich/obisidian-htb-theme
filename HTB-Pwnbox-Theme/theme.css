@@ -1,418 +1,257 @@
 /* HackTheBox Pwnbox Theme for Obsidian */
 /* Based on the official HTB Pwnbox terminal colors */
 
-.theme-dark,
-.theme-light {
-  /* Core colors - HTB dark blue background with light blue-gray text */
-  --background-primary: #141d2b;
-  --text-normal: #a4b1cd;
+.theme-dark {
+    /* Core colors - HTB dark blue background with light blue-gray text */
+    --background-primary: #141d2b;
+    --text-normal: #a4b1cd;
 
-  /* Background variations (distance-based) */
-  --background-primary-alt: #1a2332;
-  --background-secondary: #1f2937;
-  --background-secondary-alt: #243142;
+    /* Background variations (distance-based) */
+    --background-primary-alt: #1a2332;
+    --background-secondary: #1f2937;
+    --background-secondary-alt: #243142;
 
-  /* Code block colors */
-  --code-background: #1a2332;
-  --code-foreground: #c5d1eb;
+    /* Code block colors */
+    --code-background: #1a2332;
+    --code-foreground: #c5d1eb;
 
-  /* Border color - HTB selection blue */
-  --border-color: #313f55;
+    /* Border color - HTB selection blue */
+    --border-color: #313f55;
 
-  /* Selection colors */
-  --text-selection: #313f55;
-  --text-selection-fg: #c5d1eb;
+    /* Selection colors */
+    --text-selection: #313f55;
+    /* Selection fg doesn't work natively in all views, handled via background usually */
 
-  /* HTB signature color palette */
-  --htb-green: #9fef00; /* Iconic HTB neon green */
-  --htb-green-bright: #c5f467; /* Bright green */
-  --htb-cyan: #2ee7b6; /* Cyan accent */
-  --htb-cyan-bright: #5cecc6; /* Bright cyan */
-  --htb-blue: #5cb2ff; /* Blue accent */
-  --htb-purple: #c16cfa; /* Purple accent */
-  --htb-yellow: #ffcc5c; /* Yellow accent */
-  --htb-orange: #ffaf00; /* Orange accent */
-  --htb-red: #ff8484; /* Red accent */
+    /* HTB signature color palette */
+    --htb-green: #9fef00; /* Iconic HTB neon green */
+    --htb-green-bright: #c5f467; /* Bright green */
+    --htb-cyan: #2ee7b6; /* Cyan accent */
+    --htb-cyan-bright: #5cecc6; /* Bright cyan */
+    --htb-blue: #5cb2ff; /* Blue accent */
+    --htb-purple: #c16cfa; /* Purple accent */
+    --htb-yellow: #ffcc5c; /* Yellow accent */
+    --htb-orange: #ffaf00; /* Orange accent */
+    --htb-red: #ff8484; /* Red accent */
 
-  /* 13-slot color system using HTB palette */
-  --text-title-h1: var(--htb-green); /* H1 - Iconic HTB green */
-  --text-title-h2: var(--htb-cyan); /* H2 - Cyan */
-  --text-title-h3: var(--htb-blue); /* H3 - Blue */
-  --text-title-h4: var(--htb-purple); /* H4 - Purple */
-  --text-title-h5: var(--htb-yellow); /* H5 - Yellow */
-  --text-title-h6: var(--htb-orange); /* H6 - Orange */
-  --text-link: var(--htb-cyan-bright); /* Links - Bright cyan */
-  --markup-code: var(--htb-green-bright); /* Code - Bright green */
-  --text-mark: var(--htb-yellow); /* Highlight - Yellow */
-  --interactive-accent: var(--htb-green); /* Accent - HTB green */
-  --blockquote-border: var(--htb-cyan); /* Quotes - Cyan */
-  --text-muted: #6b7a94; /* Muted - Dimmed blue-gray */
-  --text-faint: #4a5568; /* Faint - Very dim */
+    /* 13-slot color system using HTB palette */
+    --h1-color: var(--htb-green);
+    --h2-color: var(--htb-cyan);
+    --h3-color: var(--htb-blue);
+    --h4-color: var(--htb-purple);
+    --h5-color: var(--htb-yellow);
+    --h6-color: var(--htb-orange);
 
-  /* Additional mappings */
-  --text-accent: var(--interactive-accent);
-  --text-accent-hover: var(--htb-green-bright);
-  --text-error: var(--htb-red);
-  --text-error-hover: #ff6e6e;
-  --text-highlight-bg: var(--htb-green);
-  --text-on-accent: #141d2b;
+    --text-link: var(--htb-cyan-bright);
+    --text-mark: var(--background-primary); /* Text color inside highlights */
+    --interactive-accent: var(--htb-green);
+    --text-muted: #6b7a94;
+    --text-faint: #4a5568;
 
-  --interactive-normal: var(--code-background);
-  --interactive-hover: var(--htb-green-bright);
-  --interactive-accent-hover: var(--htb-green-bright);
-  --interactive-success: var(--htb-green);
+    /* Bold Text */
+    --bold-color: var(--htb-orange);
+    --bold-weight: 700;
 
-  --scrollbar-bg: var(--background-primary);
-  --scrollbar-thumb-bg: var(--code-background);
-  --scrollbar-active-thumb-bg: var(--htb-green);
+    /* Additional mappings */
+    --text-accent: var(--interactive-accent);
+    --text-accent-hover: var(--htb-green-bright);
+    --text-error: var(--htb-red);
+    --text-error-hover: #ff6e6e;
+    --text-highlight-bg: var(--htb-green);
+    --text-on-accent: #141d2b;
 
-  --background-modifier-border: var(--border-color);
-  --background-modifier-form-field: var(--code-background);
-  --background-modifier-form-field-highlighted: var(--code-background);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
-  --background-modifier-success: var(--interactive-success);
-  --background-modifier-error: var(--text-error);
-  --background-modifier-error-hover: var(--text-error-hover);
-  --background-modifier-cover: rgba(20, 29, 43, 0.95);
+    --interactive-normal: var(--code-background);
+    --interactive-hover: var(--htb-green-bright);
+    --interactive-accent-hover: var(--htb-green-bright);
+    --interactive-success: var(--htb-green);
 
-  --link-color: var(--text-link);
-  --link-color-hover: var(--htb-cyan);
-  --link-unresolved-color: var(--text-muted);
-  --link-unresolved-opacity: 0.6;
+    --scrollbar-bg: var(--background-primary);
+    --scrollbar-thumb-bg: var(--border-color);
+    --scrollbar-active-thumb-bg: var(--htb-green);
 
-  --tag-color: var(--htb-green);
-  --tag-background: var(--code-background);
+    --background-modifier-border: var(--border-color);
+    --background-modifier-form-field: var(--code-background);
+    --background-modifier-form-field-highlighted: var(--code-background);
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+    --background-modifier-success: var(--interactive-success);
+    --background-modifier-error: var(--text-error);
+    --background-modifier-error-hover: var(--text-error-hover);
+    --background-modifier-cover: rgba(20, 29, 43, 0.95);
 
-  --graph-line: var(--text-muted);
-  --graph-node: var(--htb-green);
-  --graph-node-unresolved: var(--text-muted);
-  --graph-node-focused: var(--htb-cyan);
-  --graph-node-tag: var(--htb-yellow);
-  --graph-node-attachment: var(--htb-purple);
+    --link-color: var(--text-link);
+    --link-color-hover: var(--htb-cyan);
+    --link-unresolved-color: var(--text-muted);
+    --link-unresolved-opacity: 0.8;
 
-  /* Fonts - HTB uses Ubuntu Mono */
-  --font-interface-theme: "Liberation Sans", "Ubuntu", sans-serif;
-  --font-text-theme: "Liberation Sans", "Ubuntu", sans-serif;
-  --font-monospace-theme: "CaskaydiaMono Nerd Font", "Ubuntu Mono", monospace;
+    --tag-color: var(--htb-green);
+    --tag-background: rgba(159, 239, 0, 0.15);
+    --tag-border-color: rgba(159, 239, 0, 0.3);
+    --tag-border-width: 1px;
+
+    /* Graph Colors */
+    --graph-line: var(--text-muted);
+    --graph-node: var(--htb-green);
+    --graph-node-unresolved: var(--text-muted);
+    --graph-node-focused: var(--htb-cyan);
+    --graph-node-tag: var(--htb-yellow);
+    --graph-node-attachment: var(--htb-purple);
+
+    /* Fonts - HTB uses Ubuntu Mono */
+    --font-interface-theme: "Liberation Sans", "Ubuntu", sans-serif;
+    --font-text-theme: "Liberation Sans", "Ubuntu", sans-serif;
+    --font-monospace-theme:
+        "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+
+    /* Modern Syntax Highlighting (CodeMirror 6) */
+    --code-keyword: var(--htb-red);
+    --code-string: var(--htb-yellow);
+    --code-number: var(--htb-purple);
+    --code-comment: var(--text-muted);
+    --code-operator: var(--htb-cyan);
+    --code-value: var(--text-normal);
+    --code-function: var(--htb-blue);
+    --code-property: var(--htb-cyan-bright);
+
+    /* Native Callout Variables Setup */
+    --callout-default: 46, 231, 182; /* Cyan */
+    --callout-info: 92, 178, 255; /* Blue */
+    --callout-warning: 255, 175, 0; /* Orange */
+    --callout-error: 255, 132, 132; /* Red */
+    --callout-success: 159, 239, 0; /* HTB Green */
 }
 
-/* Headers - HTB signature color gradient */
-.cm-header-1,
-.markdown-rendered h1 {
-  color: var(--text-title-h1);
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(159, 239, 0, 0.3);
+/* Headers - HTB signature color glow (Optimized for readability) */
+.markdown-rendered h1,
+.HyperMD-header-1 {
+    text-shadow: 0 0 5px rgba(159, 239, 0, 0.2);
 }
-.cm-header-2,
-.markdown-rendered h2 {
-  color: var(--text-title-h2);
-  font-weight: 600;
-  text-shadow: 0 0 6px rgba(46, 231, 182, 0.2);
-}
-.cm-header-3,
-.markdown-rendered h3 {
-  color: var(--text-title-h3);
-  font-weight: 600;
-}
-.cm-header-4,
-.markdown-rendered h4 {
-  color: var(--text-title-h4);
-  font-weight: 500;
-}
-.cm-header-5,
-.markdown-rendered h5 {
-  color: var(--text-title-h5);
-  font-weight: 500;
-}
-.cm-header-6,
-.markdown-rendered h6 {
-  color: var(--text-title-h6);
-  font-weight: 500;
+.markdown-rendered h2,
+.HyperMD-header-2 {
+    text-shadow: 0 0 4px rgba(46, 231, 182, 0.15);
 }
 
 /* Code blocks - HTB terminal style */
 .markdown-rendered code {
-  font-family: var(--font-monospace-theme);
-  background-color: var(--code-background);
-  color: var(--markup-code);
-  padding: 3px 6px;
-  border-radius: 3px;
-  border: 1px solid rgba(159, 239, 0, 0.2);
+    background-color: var(--code-background);
+    color: var(--htb-green-bright);
+    border: 1px solid rgba(159, 239, 0, 0.2);
 }
 
 .markdown-rendered pre {
-  background-color: var(--code-background);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--htb-green);
-  border-radius: 4px;
-  padding: 14px;
-}
-
-.markdown-rendered pre code {
-  background-color: transparent;
-  color: var(--code-foreground);
-  border: none;
-}
-
-/* Syntax highlighting - HTB color scheme */
-.cm-s-obsidian span.cm-keyword {
-  color: var(--htb-red);
-}
-.cm-s-obsidian span.cm-string {
-  color: var(--htb-yellow);
-}
-.cm-s-obsidian span.cm-number {
-  color: var(--htb-purple);
-}
-.cm-s-obsidian span.cm-comment {
-  color: var(--text-muted);
-  font-style: italic;
-}
-.cm-s-obsidian span.cm-operator {
-  color: var(--htb-cyan);
-}
-.cm-s-obsidian span.cm-variable {
-  color: var(--text-normal);
-}
-.cm-s-obsidian span.cm-def {
-  color: var(--htb-blue);
-}
-
-/* Highlighted text - HTB green glow */
-.markdown-rendered mark,
-.cm-s-obsidian span.cm-highlight,
-mark {
-  background-color: var(--htb-green) !important;
-  color: var(--background-primary) !important;
-  padding: 2px 5px;
-  border-radius: 3px;
-  font-weight: 600;
+    background-color: var(--code-background);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--htb-green);
+    border-radius: 4px;
 }
 
 /* Links - HTB cyan with hover effect */
 .markdown-rendered a {
-  color: var(--text-link);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
 }
 
 .markdown-rendered a:hover {
-  color: var(--link-color-hover);
-  border-bottom-color: var(--link-color-hover);
-  text-shadow: 0 0 8px rgba(92, 236, 198, 0.4);
+    text-shadow: 0 0 8px rgba(92, 236, 198, 0.4);
 }
 
 /* Blockquotes - HTB cyan accent */
 .markdown-rendered blockquote {
-  border-left: 4px solid var(--blockquote-border);
-  padding-left: 1em;
-  color: var(--text-muted);
-  background-color: rgba(46, 231, 182, 0.05);
-  padding: 10px 10px 10px 16px;
-  border-radius: 0 4px 4px 0;
+    border-left-color: var(--htb-cyan);
+    background-color: rgba(46, 231, 182, 0.05);
+    border-radius: 0 4px 4px 0;
 }
 
-/* Status bar - HTB dark theme */
+/* Status bar & Active Files */
 .status-bar {
-  background-color: var(--code-background);
-  border-top: 1px solid var(--border-color);
-  color: var(--htb-green);
+    background-color: var(--code-background);
+    border-top: 1px solid var(--border-color);
+    color: var(--htb-green);
 }
 
-/* Active file - HTB green highlight */
 .workspace-leaf.mod-active .workspace-leaf-header-title {
-  color: var(--htb-green);
-  font-weight: 600;
+    color: var(--htb-green);
+    font-weight: 600;
 }
 
 .nav-file-title.is-active {
-  background-color: var(--code-background);
-  color: var(--htb-green);
-  border-left: 3px solid var(--htb-green);
-  font-weight: 500;
+    background-color: var(--code-background);
+    color: var(--htb-green);
+    border-left: 3px solid var(--htb-green);
 }
 
-/* Text selection - HTB selection color */
-::selection {
-  background-color: var(--text-selection);
-  color: var(--text-selection-fg);
-}
-
-/* Search results - HTB accent colors */
+/* Search results */
 .search-result-file-title {
-  color: var(--htb-green);
-  font-weight: 600;
+    color: var(--htb-green);
 }
-
 .search-result-file-match {
-  background-color: var(--code-background);
-  color: var(--text-normal);
-  border-left: 3px solid var(--htb-green);
-  padding: 10px;
-  border-radius: 4px;
-  margin: 4px 0;
+    background-color: var(--code-background);
+    border-left: 3px solid var(--htb-green);
 }
 
-.search-result-file-matched-text {
-  background-color: var(--htb-green);
-  color: var(--background-primary);
-  padding: 2px 4px;
-  border-radius: 2px;
-  font-weight: 600;
-}
-
-/* Tables - HTB styled */
+/* Tables */
 .markdown-rendered table {
-  border: 1px solid var(--border-color);
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
-
 .markdown-rendered th {
-  background-color: var(--code-background);
-  color: var(--htb-green);
-  font-weight: 600;
-  padding: 10px 14px;
-  border: 1px solid var(--border-color);
+    background-color: var(--code-background);
+    color: var(--htb-green);
+    border: 1px solid var(--border-color);
 }
-
 .markdown-rendered td {
-  border: 1px solid var(--border-color);
-  padding: 8px 14px;
+    border: 1px solid var(--border-color);
 }
-
 .markdown-rendered tr:hover {
-  background-color: rgba(159, 239, 0, 0.05);
+    background-color: rgba(159, 239, 0, 0.05);
 }
 
-/* Callouts - HTB accent style */
-.callout {
-  border-left: 4px solid var(--htb-green);
-  background-color: rgba(26, 35, 50, 0.6);
-  border-radius: 4px;
-  padding: 14px;
-  margin: 14px 0;
-  backdrop-filter: blur(8px);
-}
-
-.callout-title {
-  color: var(--htb-green);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Modal dialogs - HTB style */
+/* Modal dialogs */
 .modal {
-  background-color: var(--background-primary);
-  border: 2px solid var(--htb-green);
-  border-radius: 6px;
-  box-shadow: 0 0 30px rgba(159, 239, 0, 0.2);
+    border: 1px solid var(--htb-green);
+    box-shadow: 0 0 20px rgba(159, 239, 0, 0.15);
 }
 
-.modal-title {
-  color: var(--htb-green);
+/* Buttons */
+button {
+    transition: all 0.2s ease;
+}
+button:hover {
+    box-shadow: 0 0 8px rgba(159, 239, 0, 0.3);
 }
 
-/* Settings - HTB green accents */
-.vertical-tab-header-group-title {
-  color: var(--htb-green);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.vertical-tab-nav-item.is-active {
-  background-color: var(--code-background);
-  color: var(--htb-green);
-  border-left: 3px solid var(--htb-green);
-}
-
-/* Buttons - HTB interactive style */
-.button {
-  background-color: var(--code-background);
-  color: var(--text-normal);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.button:hover {
-  background-color: var(--htb-green);
-  color: var(--background-primary);
-  border-color: var(--htb-green);
-  box-shadow: 0 0 12px rgba(159, 239, 0, 0.4);
-  font-weight: 600;
-}
-
-/* Checkboxes - HTB green */
-input[type="checkbox"] {
-  accent-color: var(--htb-green);
-}
-
-input[type="checkbox"]:checked {
-  filter: drop-shadow(0 0 4px rgba(159, 239, 0, 0.5));
-}
-
-/* Tags - HTB style */
-.tag {
-  background-color: rgba(159, 239, 0, 0.15);
-  color: var(--htb-green);
-  border: 1px solid rgba(159, 239, 0, 0.3);
-  border-radius: 3px;
-  padding: 3px 10px;
-  font-size: 0.85em;
-  font-weight: 500;
-}
-
-/* Scrollbar - HTB themed */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--code-background);
-  border-radius: 5px;
-  border: 2px solid var(--background-primary);
-}
-
+/* Scrollbar hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--htb-green);
-  box-shadow: 0 0 8px rgba(159, 239, 0, 0.4);
-}
-
-/* File explorer - HTB style */
-.nav-folder-title {
-  color: var(--text-normal);
-}
-
-.nav-folder-title:hover {
-  color: var(--htb-cyan);
+    background: var(--htb-green);
+    box-shadow: 0 0 8px rgba(159, 239, 0, 0.4);
 }
 
 /* Dividers */
 .markdown-rendered hr {
-  border: none;
-  border-top: 2px solid var(--border-color);
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--htb-green) 50%,
-    transparent 100%
-  );
-  height: 2px;
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--htb-green) 50%,
+        transparent 100%
+    );
 }
 
-/* Lists - HTB accent bullets */
+/* Lists */
 .markdown-rendered ul > li::marker {
-  color: var(--htb-cyan);
+    color: var(--htb-cyan);
+}
+.markdown-rendered ol > li::marker {
+    color: var(--htb-green);
+    font-weight: 600;
 }
 
-.markdown-rendered ol > li::marker {
-  color: var(--htb-green);
-  font-weight: 600;
+/* HTB Academy Style Inline Code (Single Backticks) */
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--htb-green) !important; /* The classic HTB neon green */
+  background-color: rgba(159, 239, 0, 0.1); /* Very faint green background */
+  border: 1px solid rgba(159, 239, 0, 0.25); /* Subtle green border */
+  border-radius: 4px;
+  padding: 0.15em 0.3em;
+  font-family: var(--font-monospace-theme);
 }
